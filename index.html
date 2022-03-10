@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/css/main.css" />
+    <script defer type="module" src="src/js/controller.js"></script>
+
+    <title>Note Taker app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input__area">
+        <h1 class="main__title">Note Taker</h1>
+        <h2>Add a New Note:</h2>
+
+        <label for="note__textarea">Note:</label>
+        <textarea
+          id="note__textarea"
+          name="note"
+          placeholder="Write your note here"
+        ></textarea>
+
+        <button class="btn--add__note"><span>Add Note</span></button>
+      </div>
+
+      <div class="note__area">
+        <p>No notes added yet!</p>
+        <!-- <div class="note">
+          <h3>Note 1</h3>
+          <p>Hey there my name is Andy</p>
+          <button class="btn--view__details">View Details</button>
+          <button class="btn--delete">Delete</button>
+        </div> -->
+      </div>
+    </div>
+
+    <!--MODALS-->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Note 2</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

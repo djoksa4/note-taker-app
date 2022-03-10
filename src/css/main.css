@@ -1,0 +1,157 @@
+.container {
+  border: 1px solid black;
+  margin: 100px 50px 100px;
+  padding: 25px 100px 250px;
+  background-image: linear-gradient(white, lightgray);
+  font-weight: bold;
+}
+
+.input__area {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main__title {
+  font-size: 60px;
+  font-weight: 200;
+  margin: 0;
+}
+
+h2 {
+  color: #0d9e31;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+#note__textarea {
+  width: 800px;
+  height: 60px;
+  margin: 10px 0 0;
+  font-size: 15px;
+  padding: 10px;
+}
+
+label {
+  font-size: 25px;
+}
+
+.btn--add__note {
+  display: block;
+  background-color: #0d9e31;
+  color: white;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px #0d9e31 solid;
+  border-radius: 3px;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.btn--add__note:hover {
+  border: 1px #0d9e31 solid;
+  background-color: white;
+  color: #0d9e31;
+}
+
+.btn--view__details {
+  background-color: #3e98ff;
+  color: white;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px #3e98ff solid;
+  border-radius: 3px;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.btn--view__details:hover {
+  border: 1px #3e98ff solid;
+  background-color: white;
+  color: #3e98ff;
+}
+
+.btn--delete {
+  background-color: darkred;
+  color: white;
+  padding: 10px 10px;
+  font-size: 15px;
+  border: 1px darkred solid;
+  border-radius: 3px;
+  margin: 20px auto 0;
+  cursor: pointer;
+}
+
+.btn--delete:hover {
+  border: 1px darkred solid;
+  background-color: white;
+  color: darkred;
+}
+
+.note__area {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.note {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  flex-basis: 40%;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  min-width: 0;
+}
+
+.note p {
+  font-weight: 400;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MODALS */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 35px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
