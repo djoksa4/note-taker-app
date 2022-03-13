@@ -5,41 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <script defer type="module" src="src/js/controller.js"></script>
 
     <title>Note Taker app</title>
   </head>
   <body>
     <div class="container">
-      <div class="input__area">
-        <h1 class="main__title">Note Taker</h1>
+      <div class="input">
+        <h1>Note Taker</h1>
         <h2>Add a New Note:</h2>
 
-        <label for="note__textarea">Note:</label>
+        <label for="input__textarea">Note:</label>
         <textarea
-          id="note__textarea"
+          class="input__textarea"
+          id="input__textarea"
           name="note"
           placeholder="Write your note here"
         ></textarea>
 
-        <button class="btn--add__note"><span>Add Note</span></button>
+        <button class="btn input__btn"><span>Add Note</span></button>
       </div>
 
-      <div class="note__area">
+      <div class="note-area">
         <p>No notes added yet!</p>
-        <!-- <div class="note">
+        <!-- <div class="note-area__note">
           <h3>Note 1</h3>
           <p>Hey there my name is Andy</p>
-          <button class="btn--view__details">View Details</button>
-          <button class="btn--delete">Delete</button>
+          <button class="btn note-area__btn--details">View Details</button>
+          <button class="btn note-area__btn--delete">Delete</button>
         </div> -->
       </div>
     </div>
 
     <!--MODALS-->
     <div class="modal hidden">
-      <button class="close-modal">&times;</button>
+      <button class="modal__btn">&times;</button>
       <h1>Note 2</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting

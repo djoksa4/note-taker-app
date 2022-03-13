@@ -1,11 +1,11 @@
 class View {
   // DOM selectors
-  #textAreaElement = document.querySelector("#note__textarea");
-  #addNoteButton = document.querySelector(".btn--add__note");
-  #noteAreaElement = document.querySelector(".note__area");
+  #textAreaElement = document.querySelector(".input__textarea");
+  #addNoteButton = document.querySelector(".input__btn");
+  #noteAreaElement = document.querySelector(".note-area");
   #modal = document.querySelector(".modal");
   #overlay = document.querySelector(".overlay");
-  #closeModalBtn = document.querySelector(".close-modal");
+  #closeModalBtn = document.querySelector(".modal__btn");
 
   #data;
   #noNotes = "<p>No notes added yet!</p>";
@@ -47,7 +47,7 @@ class View {
     this.#noteAreaElement.addEventListener(
       "click",
       function (e) {
-        const btn = e.target.closest(".btn--view__details");
+        const btn = e.target.closest(".note-area__btn--details");
         if (!btn) return;
         const noteEl = btn.parentElement;
 
@@ -87,7 +87,7 @@ class View {
 
   addhandleRemoveNote(handler) {
     this.#noteAreaElement.addEventListener("click", function (e) {
-      const btn = e.target.closest(".btn--delete");
+      const btn = e.target.closest(".note-area__btn--delete");
       if (!btn) return;
       const noteEl = btn.parentElement;
       handler(+noteEl.dataset.noteNumber);
@@ -107,11 +107,11 @@ class View {
     let markup = "";
     this.#data.forEach((cur, i) => {
       markup += `
-            <div class="note" data-note-number="${i + 1}">
+            <div class="note-area__note" data-note-number="${i + 1}">
                 <h3>Note ${i + 1}</h3>
                 <p>${cur}</p>
-                <button class="btn--view__details">View Details</button>
-                <button class="btn--delete">Delete</button>
+                <button class="btn note-area__btn--details">View Details</button>
+                <button class="btn note-area__btn--delete">Delete</button>
             </div>
             `;
     });
